@@ -7,8 +7,8 @@ if status is-interactive
 
     set -gx EDITOR nvim
 
+    set PATH $HOME/.cargo/bin $PATH
 {{ if .supabase.enabled }}    supabase completion fish | source{{ end }}
-    source "$HOME/.cargo/env.fish"
 {{ if or .tauri.enabled }}    cargo tauri completions --shell fish | source{{ end }}
     mise activate fish | source
     zoxide init fish | source
