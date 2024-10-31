@@ -1,15 +1,15 @@
 if status is-interactive
-    {{ if eq .chezmoi.os "linux" }}eval (keychain --agents ssh --eval ~/.ssh/id_ed25519){{ end }}
+{{ if eq .chezmoi.os "linux" }}    eval (keychain --agents ssh --eval ~/.ssh/id_ed25519){{ end }}
 
-    {{ if eq .chezmoi.osRelease.id "ubuntu" }}alias bat=batcat{{ end }}
+{{ if eq .chezmoi.osRelease.id "ubuntu" }}    alias bat=batcat{{ end }}
     alias l="eza --all --icons --long --git"
     alias zla="zellij attach"
 
     set -gx EDITOR nvim
 
-    {{ if .supabase.enabled }}supabase completion fish | source{{ end }}
+{{ if .supabase.enabled }}    supabase completion fish | source{{ end }}
     source "$HOME/.cargo/env.fish"
-    {{ if or .tauri.enabled }}cargo tauri completions --shell fish | source{{ end }}
+{{ if or .tauri.enabled }}    cargo tauri completions --shell fish | source{{ end }}
     mise activate fish | source
     zoxide init fish | source
     starship init fish | source
