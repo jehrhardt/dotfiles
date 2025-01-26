@@ -1,16 +1,14 @@
 if status is-interactive
-{{ if eq .chezmoi.os "linux" }}    eval (keychain --agents ssh --eval ~/.ssh/id_ed25519)
-
-    alias bat=batcat{{ end }}
+{{ if eq .chezmoi.os "linux" }}    eval (keychain --agents ssh --eval ~/.ssh/id_ed25519){{ end }}
     alias l="eza --all --icons --long --git"
     alias zla="zellij attach"
+    alias vimdiff='nvim -d'
 
     set -gx EDITOR nvim
 
     set PATH $HOME/.cargo/bin $PATH
-{{ if .supabase.enabled }}    supabase completion fish | source{{ end }}
-{{ if .tauri.enabled }}    cargo tauri completions --shell fish | source{{ end }}
     mise activate fish | source
     zoxide init fish | source
+    chezmoi completion fish | source
     starship init fish | source
 end
