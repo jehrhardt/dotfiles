@@ -1,0 +1,8 @@
+{{- $git_email := promptStringOnce . "git_email" "Email address for Git" -}}
+
+[data.git.user]
+    email = {{ $git_email | quote }}
+
+[merge]
+    command = "nvim"
+    args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Source {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
