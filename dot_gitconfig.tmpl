@@ -8,9 +8,7 @@
 [user]
 	email = {{ .git.user.email }}
 	name = Jan Ehrhardt
-	signingkey = ~/.ssh/id_ed25519.pub
-[gpg]
-	format = ssh
+	signingkey = {{ .git.user.signingkey }}
 [init]
 	defaultBranch = main
 [commit]
