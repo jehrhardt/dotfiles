@@ -3,7 +3,7 @@
 [user]
 	email = {{ .git.user.email }}
 	name = Jan Ehrhardt
-	signingkey = {{ .git.user.signingkey }}
+  signingkey = ~/.ssh/id_ed25519
 [init]
 	defaultBranch = main
 [commit]
@@ -18,3 +18,5 @@
   dark = true
 [merge]
   conflictstyle = zdiff3
+[gpg]
+  format = ssh
