@@ -1,7 +1,9 @@
 {{- $git_email := promptStringOnce . "git_email" "Email address for Git" -}}
+{{- $git_gpg_key := promptStringOnce . "git_gpg_key" "GPG key for Git commit signing" -}}
 
 [data.git.user]
     email = {{ $git_email | quote }}
+    signingkey = {{ $git_gpg_key | quote }}
 
 [merge]
     command = "nvim"
