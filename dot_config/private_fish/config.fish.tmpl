@@ -1,5 +1,5 @@
 if status is-interactive
-{{ if eq .chezmoi.os "linux" }}    eval (keychain --agents ssh --eval ~/.ssh/id_ed25519){{ end }}
+    {{ if eq .chezmoi.os "linux" }}eval (keychain ssh --eval ~/.ssh/id_ed25519){{ end }}
     alias l="eza --all --icons --long --git"
     alias zla="zellij attach"
     alias vimdiff='nvim -d'
