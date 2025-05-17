@@ -1,5 +1,4 @@
 if status is-interactive
-    {{ if eq .chezmoi.os "linux" }}eval (keychain ssh --eval ~/.ssh/id_ed25519){{ end }}
     alias l="eza --all --icons --long --git"
     alias zla="zellij attach"
     alias vimdiff='nvim -d'
@@ -11,4 +10,5 @@ if status is-interactive
     zoxide init fish | source
     chezmoi completion fish | source
     starship init fish | source
+    {{ if eq .chezmoi.os "linux" }}keychain --eval ~/.ssh/id_ed25519 | source{{ end }}
 end
