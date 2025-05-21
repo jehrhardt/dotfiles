@@ -1,4 +1,57 @@
 if status is-interactive
+    # Check if the tools directory exists
+    if test -d ~/.local/tools
+        # Check if there are any Python files using find
+        set py_files (find ~/.local/tools -name "*.py" -type f | count)
+
+        # Only define the function if Python files exist
+        if test $py_files -gt 0
+            # Function to wrap Python scripts in ~/.local/tools
+            function tools
+                # First, check if uv is installed
+                if not command -v uv >/dev/null
+                    echo "Error: The 'uv' command is not installed or not in your PATH."
+                    echo "Please install uv before using the tools command."
+                    return 1
+                end
+
+                # Check if at least one argument is provided
+                if test (count $argv) -lt 1
+                    echo "Usage: tools <script-name> [arguments...]"
+                    return 1
+                end
+
+                # Extract the script name and remaining arguments
+                set script_name $argv[1]
+                set script_path ~/.local/tools/$script_name.py
+
+                # Check if the script exists
+                if not test -f $script_path
+                    echo "Error: Script $script_name.py not found in ~/.local/tools/"
+                    return 1
+                end
+
+                # Execute the script with uv run, passing all remaining arguments
+                uv run $script_path $argv[2..-1]
+            end
+
+            # Add tab completion for the tools command
+            function __fish_tools_complete
+                # Get all Python files in the directory
+                for pyfile in ~/.local/tools/*.py
+                    # Extract just the filename without path and extension
+                    set -l name (basename $pyfile .py)
+                    # Output the name as a completion option
+                    echo $name
+                end
+            end
+
+            # Register the completion function for the tools command
+            # This will trigger when user is still selecting the subcommand (first argument)
+            complete -c tools -f -n __fish_use_subcommand -a "(__fish_tools_complete)"
+        end
+    end
+
     alias l="eza --all --icons --long --git"
     alias zla="zellij attach"
     alias vimdiff='nvim -d'
