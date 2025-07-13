@@ -10,8 +10,3 @@ opacity = 0.98
 
 [general]
 import = ["~/.config/alacritty/theme.toml"]
-
-[terminal]
-
-[terminal.shell]
-program = "zellij"
