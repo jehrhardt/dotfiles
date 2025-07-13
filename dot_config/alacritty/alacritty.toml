@@ -9,7 +9,7 @@ decorations = "None"
 opacity = 0.98
 
 [general]
-import = ["~/.config/alacritty/rose-pine.toml"]
+import = ["~/.config/alacritty/theme.toml"]
 
 [terminal]
 
