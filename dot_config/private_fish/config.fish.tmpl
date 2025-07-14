@@ -10,5 +10,5 @@ if status is-interactive
     zoxide init fish | source
     chezmoi completion fish | source
     starship init fish | source
-    {{ if eq .chezmoi.os "linux" }}keychain --eval ~/.ssh/id_ed25519 | source{{ end }}
+    {{ if eq .chezmoi.os "linux" }}keychain --quiet --eval ~/.ssh/id_ed25519 | source{{ end }}
 end
