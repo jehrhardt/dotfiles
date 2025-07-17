@@ -6,6 +6,7 @@ if status is-interactive
     set -gx EDITOR nvim
 
     set PATH $HOME/.cargo/bin $PATH
+    atuin init fish | source
     mise activate fish | source
     zoxide init fish | source
     chezmoi completion fish | source
