@@ -1,0 +1,5 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "tokionight",
+  "model": "mistral/devstral-small-2507"
+}
