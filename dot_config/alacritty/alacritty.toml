@@ -1,0 +1,12 @@
+[font]
+size = 8
+normal = { family = "FiraCode Nerd Font Mono", style = "Regular" }
+bold = { family = "FiraCode Nerd Font Mono", style = "Bold" }
+italic = { family = "FiraCode Nerd Font Mono", style = "Italic" }
+
+[window]
+decorations = "None"
+opacity = 0.98
+
+[general]
+import = ["~/.config/alacritty/theme.toml"]
