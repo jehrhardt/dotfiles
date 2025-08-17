@@ -1,7 +1,11 @@
-{{- $git_email := promptStringOnce . "git_email" "Email address for Git" -}}
+{{- $git_email := promptStringOnce . "git_email" "Email address for Git" "59441+jehrhardt@users.noreply.github.com"}}
+{{- $ssh_key := promptStringOnce . "ssh_key" "SSH key" "~/.ssh/id_ed25519_sk"}}
 
 [data.git.user]
     email = {{ $git_email | quote }}
+
+[data.ssh]
+    key = {{ $ssh_key | quote }}
 
 [merge]
     command = "nvim"
