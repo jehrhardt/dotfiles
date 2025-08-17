@@ -58,12 +58,3 @@ Make fish the default shell:
 echo $( which fish ) | sudo tee -a /etc/shells
 chsh -s $( which fish )
 ```
-
-#### Sync shell history
-
-Login to atuin:
-
-```bash
-atuin login
-atuin sync
-```
