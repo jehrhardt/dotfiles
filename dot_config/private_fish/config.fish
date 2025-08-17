@@ -8,5 +8,4 @@ if status is-interactive
     zoxide init fish | source
     chezmoi completion fish | source
     starship init fish | source
-    {{ if eq .chezmoi.os "linux" }}keychain --quiet --eval {{ .ssh.key }} | source{{ end }}
 end
