@@ -1,15 +1,12 @@
 if status is-interactive
     alias l="eza --all --icons --long --git"
-    alias zla="zellij attach"
-    alias vimdiff='nvim -d'
 
     set -gx EDITOR nvim
 
-    set PATH $HOME/.cargo/bin $PATH
     atuin init fish | source
     mise activate fish | source
     zoxide init fish | source
     chezmoi completion fish | source
     starship init fish | source
-    {{ if eq .chezmoi.os "linux" }}keychain --quiet --eval ~/.ssh/id_ed25519 | source{{ end }}
+    {{ if eq .chezmoi.os "linux" }}keychain --quiet --eval ~/.ssh/id_ed25519_sk | source{{ end }}
 end
