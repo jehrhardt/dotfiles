@@ -10,7 +10,7 @@
 [user]
     name = Jan Ehrhardt
     email = {{ .git.user.email }}
-    signingkey = ~/.ssh/id_ed25519_sk
+    signingkey = {{ .ssh.key }}
 [commit]
     gpgsign = true
 [gpg]
