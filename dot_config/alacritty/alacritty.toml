@@ -16,6 +16,3 @@ decorations = "None"
 
 [keyboard]
 bindings = [{ key = "F11", action = "ToggleFullscreen" }]
-
-[terminal.shell]
-program = "zellij"
