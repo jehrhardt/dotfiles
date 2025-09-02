@@ -16,7 +16,7 @@ My dotfiles based on Omarchy and managed by [chezmoi](https://www.chezmoi.io).
 Install required packages not included in Omarchy:
 
 ```bash
-yay -S atuin chezmoi fish libfido2 starship ttf-firacode-nerd zellij
+yay -S atuin chezmoi fish libfido2 starship ttf-firacode-nerd
 ```
 
 #### SSH key
