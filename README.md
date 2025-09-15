@@ -26,20 +26,7 @@ Generate a new SSH key protected by Yubikey:
 ```bash
 # use default location for SSH key
 # use no passphrase
-ssh-keygen -t ed25519-sk -C 59441+jehrhardt@users.noreply.github.com
-```
-
-Login to Github and add SSH key for authentication:
-
-```bash
-gh auth login
-```
-
-Add SSH key for signing:
-
-```bash
-gh auth refresh -h github.com -s admin:ssh_signing_key
-gh ssh-key add ~/.ssh/id_ed25519_sk.pub --type signing --title <key_name>
+ssh-keygen -t ed25519-sk -C jan.ehrhardt@cozybytes.tech
 ```
 
 #### Setup dotfiles
