@@ -6,7 +6,6 @@ My dotfiles based on Omarchy and managed by [chezmoi](https://www.chezmoi.io).
 
 ### Prerequisits
 
-- [Arch Linux](https://archlinux.org) (btw.)
 - [Omarchy](https://omarchy.org)
 
 ### Setup
