@@ -1,21 +1,21 @@
 # dotfiles
 
-My dotfiles based on Omarchy and managed by [chezmoi](https://www.chezmoi.io).
+My dotfiles for Arch, managed by [chezmoi](https://www.chezmoi.io).
 
 ## Usage
 
 ### Prerequisits
 
-- [Omarchy](https://omarchy.org)
+- [Arch Linux](https://archlinux.org)
 
 ### Setup
 
-#### Additional packages
+#### Required packages
 
-Install required packages not included in Omarchy:
+Install required packages:
 
 ```bash
-yay -S atuin chezmoi fish libfido2 starship ttf-firacode-nerd
+pacman -S chezmoi libfido2 git
 ```
 
 #### SSH key
@@ -28,19 +28,6 @@ Generate a new SSH key protected by Yubikey:
 ssh-keygen -t ed25519-sk -C 59441+jehrhardt@users.noreply.github.com
 ```
 
-Login to Github and add SSH key for authentication:
-
-```bash
-gh auth login
-```
-
-Add SSH key for signing:
-
-```bash
-gh auth refresh -h github.com -s admin:ssh_signing_key
-gh ssh-key add ~/.ssh/id_ed25519_sk.pub --type signing --title <key_name>
-```
-
 #### Setup dotfiles
 
 Init and apply chezmoi:
@@ -49,11 +36,4 @@ Init and apply chezmoi:
 chezmoi init --ssh --apply jehrhardt
 ```
 
-#### Use Fish
-
-Make fish the default shell:
-
-```bash
-echo $( which fish ) | sudo tee -a /etc/shells
-chsh -s $( which fish )
-```
+This will automatically install and configure everything.
