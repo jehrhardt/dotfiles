@@ -32,6 +32,10 @@ log_info "Starting package installation..."
 log_info "Installing base packages with pacman..."
 sudo pacman -S --needed --noconfirm base-devel rustup git
 
+# Configure rustup with stable toolchain
+log_info "Setting up Rust stable toolchain..."
+rustup default stable
+
 # Install paru AUR helper if not already installed
 if ! command -v paru &> /dev/null; then
     log_info "Installing paru AUR helper..."
