@@ -30,7 +30,7 @@ log_info "Starting package installation..."
 
 # Install base packages with pacman
 log_info "Installing base packages with pacman..."
-sudo pacman -S --needed --noconfirm base-devel rustup git
+sudo pacman -S --needed --noconfirm base-devel rustup
 
 # Configure rustup with stable toolchain
 log_info "Setting up Rust stable toolchain..."
@@ -61,14 +61,15 @@ fi
 # Install required packages with paru
 log_info "Installing required packages ..."
 paru -S --needed --noconfirm \
+    alacritty \
     atuin \
     bat \
     chezmoi \
     fish \
-    libfido2 \
+    mise \
+    lazygit \
     starship \
     ttf-firacode-nerd \
-    uwsm \
     mako \
     hyprland \
     walker-bin \
