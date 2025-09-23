@@ -60,7 +60,36 @@ fi
 
 # Install required packages with paru
 log_info "Installing required packages ..."
-paru -S --needed --noconfirm atuin chezmoi fish libfido2 starship ttf-firacode-nerd
+paru -S --needed --noconfirm \
+    atuin \
+    bat \
+    chezmoi \
+    fish \
+    libfido2 \
+    starship \
+    ttf-firacode-nerd \
+    uwsm \
+    mako \
+    hyprland \
+    walker-bin \
+    waybar \
+    hypridle \
+    hyprlock \
+    libnotify \
+    blueberry \
+    brightnessctl \
+    btop \
+    ripgrep \
+    fd \
+    eza \
+    zoxide \
+    tree-sitter-cli \
+    neovim \
+    xdg-desktop-portal-gtk \
+    xdg-desktop-portal-hyprland \
+    qt5-wayland \
+    qt6-wayland \
+    hyprpolkitagent
 
 # Set fish as default shell
 log_info "Setting fish as default shell..."
