@@ -28,9 +28,29 @@ fi
 
 log_info "Starting package installation..."
 
-# Install base packages with pacman
+# Install base prerequisites for paru with pacman
 log_info "Installing base packages with pacman..."
-sudo pacman -S --needed --noconfirm base-devel rustup
+sudo pacman -S --needed --noconfirm base-devel fish rustup
+
+# Set fish as default shell before setting up Rust
+log_info "Setting fish as default shell..."
+FISH_PATH=$(which fish)
+
+# Add fish to /etc/shells if not already present
+if ! grep -q "^$FISH_PATH$" /etc/shells; then
+    echo "$FISH_PATH" | sudo tee -a /etc/shells
+    log_info "Added fish to /etc/shells"
+else
+    log_info "Fish already in /etc/shells"
+fi
+
+# Change default shell to fish
+if [ "$SHELL" != "$FISH_PATH" ]; then
+    chsh -s "$FISH_PATH"
+    log_info "Changed default shell to fish (will take effect on next login)"
+else
+    log_info "Fish is already the default shell"
+fi
 
 # Configure rustup with stable toolchain
 log_info "Setting up Rust stable toolchain..."
@@ -65,7 +85,6 @@ paru -S --needed --noconfirm \
     atuin \
     bat \
     chezmoi \
-    fish \
     mise \
     lazygit \
     starship \
@@ -91,25 +110,5 @@ paru -S --needed --noconfirm \
     qt5-wayland \
     qt6-wayland \
     hyprpolkitagent
-
-# Set fish as default shell
-log_info "Setting fish as default shell..."
-FISH_PATH=$(which fish)
-
-# Add fish to /etc/shells if not already present
-if ! grep -q "^$FISH_PATH$" /etc/shells; then
-    echo "$FISH_PATH" | sudo tee -a /etc/shells
-    log_info "Added fish to /etc/shells"
-else
-    log_info "Fish already in /etc/shells"
-fi
-
-# Change default shell to fish
-if [ "$SHELL" != "$FISH_PATH" ]; then
-    chsh -s "$FISH_PATH"
-    log_info "Changed default shell to fish (will take effect on next login)"
-else
-    log_info "Fish is already the default shell"
-fi
 
 log_info "All packages installed and configured successfully!"
