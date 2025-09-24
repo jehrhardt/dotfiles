@@ -58,7 +58,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "exec setsid uwsm app -- $TERMINAL --class=Impala -e impala $@"
+    "on-click": "alacritty -e impala $@"
   },
   "battery": {
     "format": "{capacity}% {icon}",
