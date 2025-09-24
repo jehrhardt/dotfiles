@@ -86,6 +86,13 @@ paru -S --needed --noconfirm \
     bat \
     chezmoi \
     mise \
+    yazi \
+    btop \
+    impala \
+    lazydocker \
+    docker \
+    docker-buildx \
+    docker-compose \
     lazygit \
     starship \
     ttf-firacode-nerd \
