@@ -84,6 +84,7 @@ paru -S --needed --noconfirm \
     alacritty \
     atuin \
     bat \
+    less \
     chezmoi \
     mise \
     yazi \
