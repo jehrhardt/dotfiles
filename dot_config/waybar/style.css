@@ -1,5 +1,4 @@
-@define-color foreground #e6d8ba;
-@define-color background #11221C;
+@import "../omarchy/current/theme/waybar.css";
 
 * {
   background-color: @background;
@@ -8,7 +7,7 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: FiraCode Nerd Font;
+  font-family: 'FiraCode Nerd Font';
   font-size: 12px;
 }
 
@@ -62,4 +61,14 @@ tooltip {
 
 .hidden {
   opacity: 0;
+}
+
+#custom-screenrecording-indicator {
+  min-width: 12px;
+  margin-left: 8.75px;
+  font-size: 10px;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #a55555;
 }
