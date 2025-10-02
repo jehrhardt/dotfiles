@@ -9,4 +9,13 @@ if status is-interactive
     zoxide init fish | source
     chezmoi completion fish | source
     starship init fish | source
+
+    # Setup dynamic aliases and completions for ~/.local/tools Python scripts
+    if test -d ~/.local/tools
+        for script in ~/.local/tools/*.py
+            set -l script_name (basename $script .py)
+            set -l script_upper (string upper $script_name | string replace -a '-' '_' | string replace -a '.' '_')
+            alias $script_name="uv run $script"
+        end
+    end
 end
