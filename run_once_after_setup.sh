@@ -34,6 +34,7 @@ paru -S --needed --noconfirm \
   blueberry \
   brightnessctl \
   libfido2 \
+  fprintd \
   starship \
   eza \
   zoxide \
