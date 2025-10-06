@@ -3,7 +3,7 @@ if status is-interactive
 
     set -gx EDITOR nvim
 
-    {{ if eq .chezmoi.os "linux" }}source "$HOME/.cargo/env.fish"{{ end }}
+    source "$HOME/.cargo/env.fish"
     atuin init fish | source
     mise activate fish | source
     zoxide init fish | source
