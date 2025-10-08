@@ -11,9 +11,9 @@
     "keybind" : "h"
 }
 {
-    "label" : "relaunch",
+    "label" : "logout",
     "action" : "uwsm stop",
-    "text" : "Relaunch",
+    "text" : "Logout",
     "keybind" : "e"
 }
 {
