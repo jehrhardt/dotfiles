@@ -1,12 +1,13 @@
 # dotfiles
 
-My dotfiles for Arch, managed by [chezmoi](https://www.chezmoi.io).
+My dotfiles for CachyOS, managed by [chezmoi](https://www.chezmoi.io).
 
 ## Usage
 
 ### Prerequisits
 
-- [Arch Linux](https://archlinux.org)
+- [CachyOS Desktop Edition](https://cachyos.org/download/)
+- [Hyprland as desktop environment](https://wiki.cachyos.org/installation/desktop_environments/)
 
 ### Setup
 
@@ -20,11 +21,9 @@ pacman -S chezmoi libfido2 git
 
 #### SSH key
 
-Generate a new SSH key protected by Yubikey:
+Generate a new SSH key protected by Yubikey (default location, no passphrase)
 
 ```bash
-# use default location for SSH key
-# use no passphrase
 ssh-keygen -t ed25519-sk -C 59441+jehrhardt@users.noreply.github.com
 ```
 
@@ -36,4 +35,4 @@ Init and apply chezmoi:
 chezmoi init --ssh --apply jehrhardt
 ```
 
-This will automatically install and configure everything.
+This will automatically install and configure the system.
