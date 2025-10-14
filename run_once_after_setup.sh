@@ -42,6 +42,7 @@ paru -S --needed --noconfirm \
   atuin \
   mise \
   yazi \
+  github-cli \
   lazygit \
   lazydocker \
   docker \
