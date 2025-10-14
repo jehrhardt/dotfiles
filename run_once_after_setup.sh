@@ -36,6 +36,7 @@ paru -S --needed --noconfirm \
   libfido2 \
   fprintd \
   starship \
+  zellij \
   eza \
   zoxide \
   atuin \
