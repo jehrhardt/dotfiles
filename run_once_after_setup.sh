@@ -33,6 +33,8 @@ paru -S --needed --noconfirm \
   libnotify \
   blueberry \
   brightnessctl \
+  iwd \
+  impala \
   libfido2 \
   fprintd \
   starship \

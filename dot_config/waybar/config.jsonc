@@ -69,7 +69,8 @@
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
-    "spacing": 1
+    "spacing": 1,
+    "on-click": "exec setsid uwsm app -- alacritty --class=Impala -e impala \"$@\""
   },
   "battery": {
     "format": "{capacity}% {icon}",
