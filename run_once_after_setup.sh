@@ -52,6 +52,7 @@ paru -S --needed --noconfirm \
   docker-compose \
   tree-sitter-cli \
   neovim \
-  uv
+  uv \
+  brave-bin
 
 log_info "All packages installed and configured successfully!"
