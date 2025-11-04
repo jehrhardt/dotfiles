@@ -50,7 +50,6 @@ paru -S --needed --noconfirm \
   docker-buildx \
   docker-compose \
   tree-sitter-cli \
-  neovim \
-  uv
+  neovim
 
 log_info "All packages installed and configured successfully!"
