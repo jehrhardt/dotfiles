@@ -27,14 +27,6 @@ log_info "Starting package installation..."
 log_info "Installing required packages ..."
 paru -S --needed --noconfirm \
   ttf-firacode-nerd \
-  fcitx5 \
-  hypridle \
-  hyprlock \
-  libnotify \
-  blueberry \
-  brightnessctl \
-  iwd \
-  impala \
   libfido2 \
   fprintd \
   starship \
@@ -43,7 +35,6 @@ paru -S --needed --noconfirm \
   zoxide \
   atuin \
   mise \
-  yazi \
   github-cli \
   lazygit \
   lazydocker \
