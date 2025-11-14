@@ -1,13 +1,12 @@
 # dotfiles
 
-My dotfiles for CachyOS, managed by [chezmoi](https://www.chezmoi.io).
+My dotfiles for CachyOS and macOS, managed by [chezmoi](https://www.chezmoi.io).
 
 ## Usage
 
 ### Prerequisits
 
-- [CachyOS Desktop Edition](https://cachyos.org/download/)
-- [Hyprland as desktop environment](https://wiki.cachyos.org/installation/desktop_environments/)
+[CachyOS Desktop Edition](https://cachyos.org/download/) or a Mac.
 
 ### Setup
 
@@ -15,8 +14,45 @@ My dotfiles for CachyOS, managed by [chezmoi](https://www.chezmoi.io).
 
 Install required packages:
 
+###### CachyOS
+
 ```bash
-pacman -S chezmoi libfido2 git
+paru -S \
+  chezmoi \
+  ttf-firacode-nerd \
+  libfido2 \
+  fprintd \
+  starship \
+  zellij \
+  eza \
+  zoxide \
+  atuin \
+  mise \
+  github-cli \
+  lazygit \
+  tree-sitter-cli \
+  neovim \
+  lazydocker \
+  docker \
+  docker-buildx \
+  docker-compose
+```
+
+##### macOS
+
+```bash
+brew install
+  chezmoi \
+  starship \
+  zellij \
+  eza \
+  zoxide \
+  atuin \
+  mise \
+  github-cli \
+  lazygit \
+  tree-sitter-cli \
+  neovim
 ```
 
 #### SSH key
