@@ -1,12 +1,13 @@
 # dotfiles
 
-My dotfiles for CachyOS and macOS, managed by [chezmoi](https://www.chezmoi.io).
+My dotfiles for CachyOS, managed by [chezmoi](https://www.chezmoi.io).
 
 ## Usage
 
 ### Prerequisits
 
-[CachyOS Desktop Edition](https://cachyos.org/download/) or a Mac.
+- [CachyOS Desktop Edition](https://cachyos.org/download/)
+- [LazyVim config](https://www.lazyvim.org/installation)
 
 ### Setup
 
