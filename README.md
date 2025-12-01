@@ -46,6 +46,7 @@ brew install
   chezmoi \
   starship \
   zellij \
+  fish \
   eza \
   zoxide \
   atuin \

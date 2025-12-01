@@ -8,9 +8,9 @@ if status is-interactive
         # Prepending path in case a system-installed rustc needs to be overridden
         set -x PATH "{cargo_bin}" $PATH
     end{{ end }}
+    chezmoi completion fish | source
     atuin init fish | source
     mise activate fish | source
     zoxide init fish | source
-    chezmoi completion fish | source
     starship init fish | source
 end
