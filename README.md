@@ -15,8 +15,6 @@ My dotfiles for CachyOS, managed by [chezmoi](https://www.chezmoi.io).
 
 Install required packages:
 
-###### CachyOS
-
 ```bash
 paru -S \
   chezmoi \
@@ -29,6 +27,7 @@ paru -S \
   zoxide \
   atuin \
   mise \
+  yazy \
   github-cli \
   lazygit \
   tree-sitter-cli \
@@ -39,30 +38,12 @@ paru -S \
   docker-compose
 ```
 
-##### macOS
-
-```bash
-brew install
-  chezmoi \
-  starship \
-  zellij \
-  fish \
-  eza \
-  zoxide \
-  atuin \
-  mise \
-  github-cli \
-  lazygit \
-  tree-sitter-cli \
-  neovim
-```
-
 #### SSH key
 
 Generate a new SSH key protected by Yubikey (default location, no passphrase)
 
 ```bash
-ssh-keygen -t ed25519-sk -C 59441+jehrhardt@users.noreply.github.com
+ssh-keygen -t ed25519-sk -C jan.ehrhardt@cozybytes.tech
 ```
 
 #### Setup dotfiles
